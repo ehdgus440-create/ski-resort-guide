@@ -60,34 +60,34 @@ body{background:#edf5fa}
 <dialog id="details" aria-labelledby="detail-name"><div class="details-head"><div><div id="detail-area"></div><h2 id="detail-name"></h2></div><form method="dialog"><button class="close" autofocus>닫기</button></form></div><div id="detail-facts"></div><p id="detail-body"></p><a id="detail-source" target="_blank" rel="noopener noreferrer">일정·이벤트 출처 보기</a><p><a id="detail-extra" target="_blank" rel="noopener noreferrer">추가 안내 보기</a></p></dialog>
 <script>
 const resorts = [
-["휘닉스 스노우파크","강원 평창","발표","11/22(일) 10:00~16:00","초급 도도·중급 호크 2면 예정","개장 할인 세부 요금은 미확인입니다.","https://phoenixhnr.co.kr/page/customer/notice/14512"],
-["모나용평","강원 평창","발표","11/22(일)","개장 당일 리프트권 1만 원","핑크 슬로프 운영 예정. 스키·보드 대여 각 1만 원, 퍼레이드와 수국차빵 선착순 제공. 공식 게시물과 앞선 행사 안내의 오전 시간 표기가 달라 당일 운영을 확인하세요. 상황실 033-330-8252~3.","https://www.yongpyong.co.kr/kor/guide/realTimeNews/bjuMediaRead.do?movstrId=376","https://cafe.yongpyong.co.kr/kor/skiNboard/slope/openStatusBoard.do"],
+["휘닉스 스노우파크","강원 평창","발표","11/22(일) 10:00~16:00","초급 도도·중급 호크 2면 예정","11/22~27 개장 특가. 11/22 주간 10:00~16:00, 11/23부터 09:00~16:00. 야간 및 코스별 운영은 공식 현황 확인.","https://phoenixhnr.co.kr/page/customer/notice/14512","https://phoenixhnr.co.kr/page/pyeongchang/board/event/150000047550"],
+["모나용평","강원 평창","발표","11/22(일)","개장 당일 리프트권 1만 원","11/20 공식 게시물은 11/22 오전 10시 퍼레이드와 개장빵 이벤트를 안내합니다. 슬로프 현황에는 핑크 주간 10:00~16:30 및 핑크 리프트 OPEN과 11/26 핑크 오픈 배너가 함께 표시됩니다. 출발 전 상황실 033-330-8252~3 확인.","https://www.yongpyong.co.kr/kor/guide/realTimeNews/bjuMediaRead.do?movstrId=376","https://cafe.yongpyong.co.kr/kor/skiNboard/slope/openStatusBoard.do"],
 ["하이원리조트","강원 정선","발표","11/24(화) 12:00~16:00","11/24~27 리프트 종일권 2,000원","제우스3-1부터 개방. 11/25부터 주간 09:00~16:00 예정.\n20주년 행사 안내 대상은 하이원 모바일 앱 회원입니다. 수능 수험생은 12/31까지 리프트 4시간권과 워터월드 입장권 각 1만 원. 12월~2월 2030 스페셜데이는 회차와 대상을 확인하세요.","https://www.yna.co.kr/amp/view/AKR20261120073600062","https://isyuday.com/ski-resort-opening-2026/"],
 ["오투리조트","강원 태백","예정","11/26(목) 목표","첫날 슬로프·이벤트 미확인","보도에 나온 개장 목표일입니다.","https://www.ycjournal.co.kr/news_view.php?social_link_idx=738"],
 ["무주덕유산리조트","전북 무주","예정","11/27(금) 예정","첫날 슬로프·이벤트 미확인","공개 보도에 나온 개장 예정일입니다.","https://www.ycjournal.co.kr/news_view.php?social_link_idx=738"],
-["알펜시아리조트","강원 평창","예정","11/28(토) 예정","첫날 슬로프·이벤트 미확인","공개 자료에 나온 개장 예정일입니다.","https://koreasnowwatch.com/ko/opening-dates/"],
-["비발디파크","강원 홍천","잠정","11월 말~12월 초 전망","정확한 개장일·이벤트 미확인","공개 보도에서 언급한 개장 전망입니다.","https://www.ppss.kr/news/articleView.html?idxno=321482"],
+["알펜시아리조트","강원 평창","예정","11/28(토) 예정","첫날 슬로프·이벤트 미확인","공개 자료에 나온 개장 예정일입니다. 공식 SKI FIRST DEAL 패키지 판매 기간은 11/16~27입니다.","https://koreasnowwatch.com/ko/opening-dates/","https://www.alpensia.com/Event-Package/PackageDtl.do?packageSeq=1478"],
+["비발디파크","강원 홍천","미확인","공식 개장일 미정","26/27 시즌패스·시즌락커 공지","공식 운영 안내상 개장일부터 2027/3/1까지. 헬멧 미착용 시 리프트·곤돌라 탑승 제한.","https://www.sonohotelsresorts.com/skiboard/info","https://www.sonohotelsresorts.com/skiboard"],
 ["엘리시안 강촌","강원 춘천","예정","12/4(금) 목표","11/25까지 얼리버드 최대 56%","11/20~25 판매 안내. 리프트권 최대 50%, 장비 대여 포함 상품 최대 56% 할인입니다.","https://kr.trip.com/blog/ski-resort-opening"],
 ["웰리힐리파크","강원 횡성","잠정","12/4(금) 잠정","개장 이벤트 미확인","통합 시즌권 판매 자료 기준입니다. 리조트 개장 공지는 미확인입니다.","https://ssolssolkong.com/event/ski-resort-opening-season-pass/"],
 ["오크밸리","강원 원주","예정","12/11(금) 예정","시즌권 안내 기준","폐장 예정일은 2027/2/20입니다. 첫날 운영과 특가는 미확인입니다.","https://isyuday.com/ski-resort-opening-2026/","https://leisure-web.yanolja.com/leisure/10366663"],
-["지산 포레스트리조트","경기 이천","잠정","12/11(금) 잠정","개장 이벤트 미확인","통합 시즌권 판매 자료 기준입니다. 리조트 개장 공지는 미확인입니다.","https://ssolssolkong.com/event/ski-resort-opening-season-pass/"],
-["곤지암리조트","경기 광주","잠정","12월 중","정확한 개장일·이벤트 미확인","공개 안내는 12월 중입니다.","https://isyuday.com/ski-resort-opening-2026/"],
-["에덴밸리리조트","경남 양산","미확인","정확한 날짜 미확인","이번 시즌 개장 이벤트 미확인","지난 시즌 개장일은 12/24였습니다.","https://koreasnowwatch.com/ko/opening-dates/"]
+["지산 포레스트리조트","경기 이천","잠정","12/11(금) 잠정","개장 이벤트 미확인","통합 시즌권 판매 자료의 잠정 일정입니다. 리조트는 11/5에 26/27 얼리버드 리프트권을 공지했습니다.","https://ssolssolkong.com/event/ski-resort-opening-season-pass/","https://www.jisanresort.co.kr/m/ski/"],
+["곤지암리조트","경기 광주","잠정","12월 중","26/27 얼리버드 리프트권 판매 공지","공식 얼리버드 공지상 12월 중 개장, 3월 초 폐장 예정. 판매 기간 11/4~12/6, 이용 기간 개장일부터 폐장일까지.","https://m.konjiamresort.co.kr/contact/noticeView.dev?idx=1712"],
+["에덴밸리리조트","경남 양산","미확인","정확한 날짜 미확인","기존 스키어스·프라임 회원 시즌권 할인","기존 회원권 효력 소멸 공지. 기존 회원 대상 26/27 시즌권 특별 할인은 개장 후 시즌권 데스크 현장 결제. 가족권은 직계가족만 해당.","https://golf.edenvalley.co.kr/"]
 ];
 const resortUpdates = [
-  ["11/22 개장 공지 · 10:00~16:00","개장 할인 금액 미확인","도도(초급)·호크(중급) 첫날 개방 예정","https://phoenixhnr.co.kr/","공식 스키장 안내"],
-  ["개장 행사 시작 시간이 공지마다 다릅니다.","개장 당일 리프트·장비 대여 특가 · 퍼레이드와 수국차빵","핑크 슬로프 첫날 개방 예정 · 실제 운영은 공식 현황 확인","https://cafe.yongpyong.co.kr/kor/skiNboard/slope/openStatusBoard.do","공식 슬로프·리프트 현황"],
+  ["11/22 개장 공지 · 10:00~16:00","11/22~27 리프트·장비 대여 개장 특가","첫날 10:00~16:00 · 11/23부터 09:00~16:00 · 코스별 운영은 공식 현황 확인","https://phoenixhnr.co.kr/","공식 스키장 안내"],
+  ["개장 행사 시작 시간이 공지마다 다릅니다.","개장 당일 리프트·장비 대여 특가 · 퍼레이드와 수국차빵","핑크 슬로프 주간 10:00~16:30 및 핑크 리프트 OPEN 표기 · 야간 OPEN 표기 없음 · 11/26 오픈 배너도 함께 표시","https://cafe.yongpyong.co.kr/kor/skiNboard/slope/openStatusBoard.do","공식 슬로프·리프트 현황"],
   ["11/27에서 11/24로 조기 개장 · 첫날 정오부터 운영","11/24~27 앱 회원 종일권 특가 · 수험생 할인","제우스3-1 첫 개방 예정 · 11/25부터 주간 09:00~16:00","https://www.high1.com/","공식 스키장 안내"],
-  ["11/26은 보도에 나온 개장 목표일입니다.","개장 이벤트 미확인","첫 개방 코스 미확인","https://www.o2resort.com/","공식 스키장 안내"],
-  ["11/27 개장 예정으로 보도됐습니다.","개장 이벤트 미확인","첫 개방 코스 미확인","https://www.mdysresort.com/guide/webcam.asp","공식 웹캠"],
-  ["개장 예정일은 현장 여건에 따라 바뀔 수 있습니다.","개장 이벤트 미확인","공식 현황에서 코스별 주간·야간 운영 확인","https://m.alpensia.com/ski/slope-now.do","공식 슬로프 운영 현황"],
-  ["개장 시기는 11월 말~12월 초 전망입니다.","개장 이벤트 미확인","첫 개방 코스 미확인","https://mice.sonohotelsresorts.com/daemyung.vp.utill.09_02_02_01.ds/dmparse.dm?areaType=S","공식 온라인캠"],
+  ["11/26은 보도에 나온 개장 목표일입니다.","개장 이벤트 미확인","첫 개방 코스 미확인","https://www.o2resort.com/SKI/slopeOpen.jsp","공식 슬로프 개방 현황"],
+  ["11/27 개장 예정으로 보도됐습니다.","개장 이벤트 미확인","첫 개방 코스 미확인","https://www.mdysresort.com/ski/schedule.asp","공식 주야간 운영 일정"],
+  ["개장 예정일은 현장 여건에 따라 바뀔 수 있습니다.","SKI FIRST DEAL 패키지 11/16~27 판매","공식 현황에서 코스별 주간·야간 운영 확인","https://m.alpensia.com/ski/slope-now.do","공식 슬로프 운영 현황"],
+  ["공식 개장일 미정 · 종료 예정 2027/3/1","26/27 시즌패스 발급처 및 시즌락커 오픈 안내","시즌 운영 안내: 주간 09:00~17:30 · 야간 운영일 23:00까지 · 심야 운영일 익일 03:00까지. 월요일 심야 미운영(2027/2/8 예외).","https://www.sonohotelsresorts.com/skiboard","공식 슬로프 운영 현황"],
   ["12/4 개장 목표 · 운영 일정 확인 필요","11/20~25 얼리버드 · 리프트권 최대 50%, 대여 포함 최대 56%","첫 개방 코스 미확인","https://www.elysian.co.kr/about-gangchon/ski","공식 스키장 안내"],
   ["통합 시즌권 자료의 잠정 일정입니다.","개장 이벤트 미확인","첫 개방 코스 미확인","https://wellihillipark.com/home/customer/webcam","공식 웹캠"],
   ["시즌권 안내 기준 · 폐장 예정 2027/2/20","개장 당일 특가 미확인","첫 개방 코스 미확인","https://oakvalley.co.kr/ski/introduction/realtime","공식 웹캠·날씨"],
-  ["통합 시즌권 자료의 잠정 일정입니다.","개장 이벤트 미확인","코스별 이용 안내 및 당일 공지 확인","https://jisanresort.co.kr/w/ski/slopes/info.asp","공식 슬로프 운영 안내"],
-  ["12월 중 개장 안내 · 정확한 날짜 미확인","개장 이벤트 미확인","첫 개방 코스 미확인","https://m.konjiamresort.co.kr/ski/skiLveCam.dev","공식 라이브캠"],
-  ["이번 시즌 개장일 미확인","개장 이벤트 미확인","첫 개방 코스 미확인","https://www.edenvalley.co.kr/","공식 스키장 안내"]
+  ["통합 시즌권 자료의 잠정 일정입니다.","26/27 얼리버드 리프트권 공식 공지(11/5)","코스별 이용 안내 및 당일 공지 확인","https://jisanresort.co.kr/w/ski/slopes/info.asp","공식 슬로프 운영 안내"],
+  ["12월 중 개장 안내 · 정확한 날짜 미확인","얼리버드 리프트권 11/4~12/6 판매 공지","첫 개방 코스 미확인","https://m.konjiamresort.co.kr/ski/skiLveCam.dev","공식 라이브캠"],
+  ["개장일 미확인 · 기존 스키어스·프라임 회원권 효력 소멸 안내","기존 스키어스·프라임 회원 대상 26/27 시즌권 50% 이상 특별 할인","첫 개방 코스 미확인","https://golf.edenvalley.co.kr/","공식 스키장 안내"]
 ];
 
 const liftPrices = [
@@ -104,7 +104,7 @@ const liftPrices = [
   ["25/26 공식표 참고", "주말 6시간 97,000원", "공식 링크에 표시된 25/26 시즌 요금이며 대·소인 통합. 방문 전 새 시즌 요금과 할인 적용 여부 확인.", "https://jisanresort.co.kr/m/ski/use/rental.asp", "https://jisanresort.co.kr/m/ski/use/rental.asp"],
   ["26/27 정상가", "주말 6시간 105,000원", "얼리버드 공지의 정상가 기준. 당시 특가 68,000원은 현재 판매 여부 별도 확인.", "https://m.konjiamresort.co.kr/contact/noticeView.dev?idx=1712", "https://m.konjiamresort.co.kr/contact/noticeView.dev?idx=1712"],
   ["25/26 참고", "7시간 대인 79,000원 / 소인 64,000원", "26/27 운영 일정과 당일권 요금 미확인"]
-];
+]
 
 const resortCards = resorts.map(([name,area,status,date,perk,body,source,extra], index) => {
   const [notice,event,slope,liveUrl,liveLabel] = resortUpdates[index];
