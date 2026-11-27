@@ -55,18 +55,18 @@ body{background:#edf5fa}
 </div>
 <p id="count" aria-live="polite"></p>
 <section id="cards" aria-label="스키장 목록"></section>
-<footer>자료 기준 2026년 11월 27일 한국시간. 개장일은 제설 여건에 따라 바뀔 수 있습니다. 카드 요약은 기준일 자료입니다. 이후 개방·휴장 여부와 운영시간은 카드에 연결된 공식 현황이나 공지에서 확인하세요. 웹캠은 현장 영상입니다. 리프트권은 적용 시즌과 권종을 확인하세요. 25/26 참고가는 지난 시즌 가격입니다.</footer>
+<footer>자료 기준 2026년 11월 28일 한국시간. 개장일은 제설 여건에 따라 바뀔 수 있습니다. 카드 요약은 기준일 자료입니다. 이후 개방·휴장 여부와 운영시간은 카드에 연결된 공식 현황이나 공지에서 확인하세요. 웹캠은 현장 영상입니다. 리프트권은 적용 시즌과 권종을 확인하세요. 25/26 참고가는 지난 시즌 가격입니다.</footer>
 </main>
 <dialog id="details" aria-labelledby="detail-name"><div class="details-head"><div><div id="detail-area"></div><h2 id="detail-name"></h2></div><form method="dialog"><button class="close" autofocus>닫기</button></form></div><div id="detail-facts"></div><p id="detail-body"></p><a id="detail-source" target="_blank" rel="noopener noreferrer">일정·이벤트 출처 보기</a><p><a id="detail-extra" target="_blank" rel="noopener noreferrer">추가 안내 보기</a></p></dialog>
 <script>
 const resorts = [
-["휘닉스 스노우파크","강원 평창","발표","11/22(일) 10:00~16:00","11/27 스패로우 추가 운영 안내","11/22~27 개장 특가. 11/22 주간 10:00~16:00, 11/23부터 09:00~16:00. 야간 및 코스별 운영은 공식 현황 확인.","https://phoenixhnr.co.kr/page/customer/notice/14512","https://phoenixhnr.co.kr/page/pyeongchang/board/event/150000047550"],
+["휘닉스 스노우파크","강원 평창","발표","11/22(일) 10:00~16:00","11/27 스패로우 추가 운영 안내","11/22 개장. 11/27부터 스패로우 추가 운영 안내. 11/22~27 현장 특가는 종료됐으며 별도 액티비티 프로모션은 12/31까지 판매.","https://phoenixhnr.co.kr/page/customer/notice/14512","https://phoenixhnr.co.kr/page/pyeongchang/board/event/150000047550"],
 ["모나용평","강원 평창","발표","11/22(일) 10:00","개장 당일 리프트권 1만 원","공식 개장 시각은 10:00으로 조정됐습니다. 11/26 공식 현황상 핑크·뉴레드 슬로프 주간 08:30~16:30, 핑크·뉴레드·옐로우 리프트 주간 OPEN. 상황실 033-330-8252~3.","https://www.yongpyong.co.kr/kor/guide/notice/read.do?noticeId=1701","https://www.yongpyong.co.kr/kor/skiNboard/slope/openStatusBoard.do"],
 ["하이원리조트","강원 정선","발표","11/24(화) 12:00~16:00","11/24~27 리프트 종일권 2,000원","제우스3-1부터 개방. 11/25부터 주간 09:00~16:00 예정.\n20주년 행사 안내 대상은 하이원 모바일 앱 회원입니다. 수능 수험생은 12/31까지 리프트 4시간권과 워터월드 입장권 각 1만 원. 12월~2월 2030 스페셜데이는 회차와 대상을 확인하세요.","https://www.yna.co.kr/amp/view/AKR20261120073600062","https://isyuday.com/ski-resort-opening-2026/"],
 ["오투리조트","강원 태백","예정","11/26(목) 목표","첫날 슬로프·이벤트 미확인","보도에 나온 개장 목표일입니다.","https://www.ycjournal.co.kr/news_view.php?social_link_idx=738"],
 ["무주덕유산리조트","전북 무주","발표","11/27(금) 09:00","스피츠하단 · 안전라이딩 행사","11/25 17:30 공식 소식에서 11/27 09:00 개장을 확정했습니다. 스피츠하단은 22:00까지 운영 안내. 안전라이딩 퍼포먼스와 백설기 증정(소진 시까지)이 진행됩니다.","https://mdysresort.com/guide/iframe_muju_news_resort.asp"],
-["알펜시아리조트","강원 평창","예정","11/28(토) 예정","첫날 슬로프·이벤트 미확인","공개 자료에 나온 개장 예정일입니다. 공식 SKI FIRST DEAL 패키지 판매 기간은 11/16~27입니다.","https://koreasnowwatch.com/ko/opening-dates/","https://www.alpensia.com/Event-Package/PackageDtl.do?packageSeq=1478"],
-["비발디파크","강원 홍천","미확인","공식 개장일 미정","26/27 시즌패스·시즌락커 공지","공식 운영 안내상 개장일부터 2027/3/1까지. 헬멧 미착용 시 리프트·곤돌라 탑승 제한.","https://www.sonohotelsresorts.com/skiboard/info","https://www.sonohotelsresorts.com/footer/customerCenter/notice?page=1"],
+["알펜시아리조트","강원 평창","예정","11/28(토) 예정","첫날 슬로프·이벤트 미확인","공개 자료에 나온 개장 예정일입니다. 공식 SKI FIRST DEAL 패키지 판매 기간은 11/16~27입니다.","https://koreasnowwatch.com/ko/opening-dates/","https://www.alpensia.com/Event-Package/EventDtl.do?packageSeq=1485"],
+["비발디파크","강원 홍천","발표","11/28 공식 운영 확인","26/27 시즌패스·시즌락커 공지","11/28 공식 운영표에 주간 09:00~17:30, 야간 19:00~23:00, 심야 미운영으로 표시됩니다. 시즌 종료 예정일 2027/3/1. 헬멧 미착용 시 리프트·곤돌라 탑승 제한.","https://www.sonohotelsresorts.com/skiboard/notice/detail/227305","https://www.sonohotelsresorts.com/skiboard/status"],
 ["엘리시안 강촌","강원 춘천","예정","12/4(금) 목표","11/25까지 얼리버드 최대 56%","11/20~25 판매 안내. 리프트권 최대 50%, 장비 대여 포함 상품 최대 56% 할인입니다.","https://kr.trip.com/blog/ski-resort-opening"],
 ["웰리힐리파크","강원 횡성","잠정","12/4(금) 잠정","공식 개장·특가 공지 게시","통합 시즌권 판매 자료 기준입니다. 리조트 개장 공지는 미확인입니다.","https://ssolssolkong.com/event/ski-resort-opening-season-pass/","https://www.wellihillipark.com/"],
 ["오크밸리","강원 원주","예정","12/11(금) 예정","시즌권 안내 기준","폐장 예정일은 2027/2/20입니다. 첫날 운영과 특가는 미확인입니다.","https://isyuday.com/ski-resort-opening-2026/","https://leisure-web.yanolja.com/leisure/10366663"],
@@ -75,13 +75,13 @@ const resorts = [
 ["에덴밸리리조트","경남 양산","미확인","정확한 날짜 미확인","기존 스키어스·프라임 회원 시즌권 할인","기존 회원권 효력 소멸 공지. 기존 회원 대상 26/27 시즌권 특별 할인은 개장 후 시즌권 데스크 현장 결제. 가족권은 직계가족만 해당.","https://golf.edenvalley.co.kr/","https://golf.edenvalley.co.kr/Inc_board/Inc_List.asp?bod_name=gongji"]
 ];
 const resortUpdates = [
-  ["11/22 개장 공지 · 10:00~16:00","11/22~27 현장 개장 특가 · 별도 스노우파크 리프트 프로모션 11/23~12/31","11/27 도도·호크·스패로우 슬로프, 도도·호크1·스패로우 리프트 운영 안내 · 주야간 세부 일정은 공식 공지 확인","https://www.phoenixhnr.co.kr/page/customer/notice/14515","공식 슬로프·리프트 운영 공지"],
+  ["11/22 개장 공지 · 10:00~16:00","11/23~12/31 스노우파크 액티비티 프로모션 · 11/22~27 현장 특가 종료","도도·호크1·스패로우 슬로프, 도도·호크·스패로우 리프트. 야간 12/4부터, 정설 16:00~18:00. 심야는 12/25부터 금·토 23:40까지(예정), 12/31 제외.","https://www.phoenixhnr.co.kr/page/customer/notice/14515","공식 슬로프·리프트 운영 공지"],
   ["공식 개장 시각 10:00 · 종전 11:00에서 조정","개장 당일 리프트·장비 대여 특가 · 퍼레이드와 수국차빵","11/26 핑크·뉴레드 슬로프 주간 08:30~16:30 · 핑크·뉴레드·옐로우 리프트 주간 OPEN · 야간 OPEN 표기 없음","https://www.yongpyong.co.kr/kor/skiNboard/slope/openStatusBoard.do","공식 슬로프·리프트 현황"],
   ["11/27에서 11/24로 조기 개장 · 첫날 정오부터 운영","11/24~27 앱 회원 종일권 특가 · 수험생 할인","제우스3-1 첫 개방 예정 · 11/25부터 주간 09:00~16:00","https://www.high1.com/","공식 스키장 안내"],
   ["11/26은 보도에 나온 개장 목표일입니다.","개장 이벤트 미확인","공식 안내표 주간 09:00~16:30, 야간 18:00~21:30(금·토·공휴일 전일, 변동 가능). 첫날 코스·리프트 운영 미확인.","https://www.o2resort.com/SKI/slopeOpen.jsp","공식 슬로프 개방 현황"],
   ["11/27 09:00 개장 확정","스키 패트롤 안전라이딩 퍼포먼스 · 백설기 증정(소진 시까지)","첫날 스피츠하단 09:00~22:00 안내 · 정설 시간 및 리프트는 공식 운영 일정 확인","https://www.mdysresort.com/ski/schedule.asp","공식 주야간 운영 일정"],
-  ["개장 예정일은 현장 여건에 따라 바뀔 수 있습니다.","SKI FIRST DEAL 패키지 11/16~27 판매","공식 현황에서 코스별 주간·야간 운영 확인","https://m.alpensia.com/ski/slope-now.do","공식 슬로프 운영 현황"],
-  ["공식 개장일 미정 · 종료 예정 2027/3/1","26/27 스키학교 공지 · 리프트권·장비 대여 결합권 예약 상품 안내","시즌 운영 안내: 주간 09:00~17:30 · 야간 운영일 23:00까지 · 심야 운영일 익일 03:00까지. 월요일 심야 미운영(2027/2/8 예외).","https://www.sonohotelsresorts.com/skiboard","공식 슬로프 운영 현황"],
+  ["11/27 공식 동계시즌 스키장 운영 일정 공지 게시","26/27 개장 기념 프로모션 11/27~12/5","공식 현황에서 코스별 주간·야간 운영 확인","https://www.alpensia.com/customer/notice/selectBoardArticle.do?bbsId=BBSMSTR_000000000072&nttId=10734","공식 스키장 운영 일정 공지"],
+  ["스키장·스노위랜드 개장 공지 게시 · 11/28 운영 확인","26/27 스키학교 공지 · 리프트권·장비 대여 결합권 예약 상품 안내","11/28 주간 09:00~17:30 · 야간 19:00~23:00 · 심야 미운영 · 코스별 상태는 공식 현황 확인","https://www.sonohotelsresorts.com/skiboard/status","공식 슬로프 운영 현황"],
   ["12/4 개장 목표 · 운영 일정 확인 필요","11/20~25 얼리버드 · 리프트권 최대 50%, 대여 포함 최대 56%","첫 개방 코스 미확인","https://www.elysian.co.kr/about-gangchon/ski","공식 스키장 안내"],
   ["통합 시즌권 자료의 잠정 일정입니다.","11/26 공식 개장 특가 요금 공지 게시 · 요금·적용 조건은 공지 확인","첫 개방 코스 미확인","https://wellihillipark.com/home/customer/webcam","공식 웹캠"],
   ["시즌권 안내 기준 · 폐장 예정 2027/2/20","개장 당일 특가 미확인","첫 개방 코스 미확인","https://oakvalley.co.kr/ski/introduction/realtime","공식 웹캠·날씨"],
